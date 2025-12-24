@@ -1,58 +1,62 @@
-This project is a simplified expense sharing application inspired by Splitwise.
-It was developed as part of a machine coding and backend design assignment.
-The system allows users to create groups, add shared expenses using multiple split strategies, track balances, and simplify dues using settlement logic.
-The primary focus is correctness of business logic, clean structure, and clarity of design decisions.
+# Splitwise Clone - Expense Sharing App
 
-Features
-User Management
-  -Create users
-  -Track individual balances
-  -View how much a user owes or is owed
-  
-Group Management
-  -Create users
-  -Track individual balances
-  -View how much a user owes or is owed
+A simplified expense sharing application inspired by Splitwise, developed as part of a machine coding and backend design assignment.
 
-Expense Management
-  -Supports the following split types
-  -Equal split
-  -Exact amount split
-  -Percentage split
+## ✨ Features
+
+### User Management
+- Create users
+- Track individual balances
+- View how much a user owes or is owed
+
+### Group Management
+- Create groups
+- Add users to groups
+- Track group-level balances
+
+### Expense Management
+Supports multiple split strategies:
+- **Equal split** - Divide expenses equally among participants
+- **Exact amount split** - Custom amounts per user
+- **Percentage split** - Split based on percentage contributions
 
 Each expense records:
-  -Payer
-  -Total amount
-  -Split details per user
+- Payer
+- Total amount
+- Split details per user
 
-Balance Tracking
-  -Tracks who owes whom
-  -Maintains user-level balances
-  -Avoids redundant or circular transactions
+### Balance Tracking
+- Tracks who owes whom
+- Maintains user-level and group-level balances
+- Avoids redundant or circular transactions
 
-Balance Simplification (Settlement)
-  -Calculates net balance per user
-  -Separates users into debtors and creditors
-  -Settles balances using a greedy approach to minimize transactions
+### Balance Simplification (Settlement)
+- Calculates net balance per user
+- Separates users into **debtors** and **creditors**
+- Uses **greedy algorithm** to minimize transactions
 
-Settlement Logic Explanation
-  Calculate net balance for each user
-    1)A positive balance indicates the user should receive money
-    2)A negative balance indicates the user owes money
-  Separate users into debtors and creditors
-  Match debtors with creditors until all balances are settled
+## Settlement Logic
 
+1. **Calculate net balance** for each user:
+   - Positive balance = user should **receive** money (creditor)
+   - Negative balance = user **owes** money (debtor)
 
-Technology Stack
-Backend
-  -Node.js
-  -Express.js
-  -JavaScript
-  -In-memory data storage
+2. **Separate users** into debtors and creditors lists
 
-Frontend
-  -React
-  -Tailwind CSS
-  -Vite
+3. **Match debtors with creditors** using greedy approach until all balances are settled
 
-  
+## 🛠️ Technology Stack
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **JavaScript** - Programming language
+- **In-memory storage** - Data persistence
+
+### Frontend
+- **React** - UI library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Build tool & dev server
+
+## 🚀 Quick Start
+
